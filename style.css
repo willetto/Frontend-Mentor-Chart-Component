@@ -1,0 +1,116 @@
+:root {
+  --primary: hsl(10, 79%, 65%);
+  --secondary: hsl(186, 34%, 60%);
+
+  --neutral-900: hsl(25, 47%, 15%);
+  --neutral-600: hsl(28, 10%, 53%);
+  --neutral-200: hsl(27, 66%, 92%);
+  --neutral-100: hsl(33, 100%, 98%);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--neutral-200);
+  display: grid;
+  place-items: center;
+}
+h2 {
+  font-weight: 700;
+}
+p {
+  font-weight: 400;
+}
+.light {
+  opacity: 0.8;
+}
+main {
+  width: 365px;
+  font-size: 18px;
+}
+.balance {
+  background-color: var(--primary);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'para logo'
+    'balance logo';
+}
+.balance > p {
+  grid-area: para;
+  color: var(--neutral-200);
+}
+.balance > img {
+  grid-area: logo;
+  justify-self: end;
+  align-self: center;
+}
+.balance-figure {
+  grid-area: balance;
+  color: var(--neutral-100);
+}
+
+.chart-card {
+  background-color: var(--neutral-100);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+.card-title {
+  color: var(--neutral-900);
+}
+#expense-chart {
+  padding-top: 2rem;
+}
+
+.divider {
+  height: 2px;
+  border: none;
+  color: var(--neutral-200);
+  background-color: var(--neutral-200);
+}
+.summary {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'para percent'
+    'balance percent';
+}
+.summary > p {
+  grid-area: para;
+  color: var(--neutral-600);
+}
+.summary-figure {
+  grid-area: balance;
+  color: var(--neutral-900);
+}
+.percentage-area {
+  grid-area: percent;
+  place-self: end;
+  text-align: right;
+}
+.percentage {
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+.percentage-area:last-child {
+  color: var(--neutral-600);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  align-self: start;
+}
+.attribution a {
+  color: var(--primary);
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 500px;
+  }
+}

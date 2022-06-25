@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <h>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Expenses Chart Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="stylereset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="balance">
+        <p class="light">My balance</p>
+        <h2 class="balance-figure">$921.48</h2>
+        <img src="images/logo.svg" alt="Circle Logo" />
+      </div>
+      <div class="chart-card">
+        <h2 class="cart-title">Spending – Last 7 days</h2>
+        <canvas id="expenseChart"></canvas>
+        <hr class="divider" />
+        <div class="summary">
+          <p>Total this month</p>
+          <h2 class="summary-figure">$478.33</h2>
+          <span class="percentage-area">
+            <p class="percentage">+2.4%</p>
+            <p>from last month</p>
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="www.treywilletto.com" target="_blank">Trey Willetto</a>.
+    </footer>
+  </body>
+</html>
